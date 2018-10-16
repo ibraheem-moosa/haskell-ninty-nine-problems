@@ -10,4 +10,4 @@ encode [] = []
 encode (x:xs) = encode' xs x 1
 
 encode' [] x' k = [(k,x')]
-encode' (x:xs) x' k = if (x == x') then encode' xs x (k+1) else ((k,x):encode' xs x 1)
+encode' (x:xs) x' k = if (x == x') then encode' xs x (k+1) else ((k,x'):encode' xs x 1)
